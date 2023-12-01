@@ -69,7 +69,7 @@ class SyncVectorEnv(VectorEnv):
         self.observations = create_empty_array(
             self.single_observation_space, n=self.num_envs, fn=np.zeros
         )
-        self._rewards = np.zeros((self.num_envs,), dtype=np.float64)
+        self._rewards = np.zeros((self.num_envs,), dtype=object)
         self._terminateds = np.zeros((self.num_envs,), dtype=np.bool_)
         self._truncateds = np.zeros((self.num_envs,), dtype=np.bool_)
 
